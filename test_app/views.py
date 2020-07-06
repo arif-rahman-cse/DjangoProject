@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request, 'home.html', {'name': 'Django Framwork'})
+    return render(request, 'index.html')
 
 def showDetails(request):
     userName = request.POST['username']
