@@ -11,7 +11,7 @@ class Destination:
     price : int
     offer : bool
 """
-#Convert a class in a Model
+# Convert a class in a Model
 class Destination(models.Model):
     # Here we need to equal sign because we are assigning a value 
     name = models.CharField(max_length=100) # Database filed length
@@ -19,3 +19,7 @@ class Destination(models.Model):
     desc = models.TextField() 
     price = models.IntegerField()
     offer = models.BooleanField(default=False) # Deafult value is false
+
+# Django “xxxxxx Object” display customization in admin action sidebar
+    def __str__(self):
+        return 'Destination: {}'.format(self.name)
