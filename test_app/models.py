@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 #This is simple destination class 
+
 """
 class Destination:
     id : int
@@ -19,3 +20,7 @@ class Destination(models.Model):
     desc = models.TextField() 
     price = models.IntegerField()
     offer = models.BooleanField(default=False) # Deafult value is false
+
+    # Django “xxxxxx Object” display customization in admin action sidebar
+    def __str__(self):
+        return 'Destination: {}'.format(self.name)
