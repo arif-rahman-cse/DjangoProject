@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', include('test_app.urls')),
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),
+    path('accounts/', include('account.urls')),
 ]
 
 #Add Url for dynamic img

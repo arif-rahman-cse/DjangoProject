@@ -34,8 +34,20 @@
 									<li class="active"><a href="{% static 'index.html' %}">Home</a></li>
 									<li><a href="{% static 'about.html' %}">About us</a></li>
 									<li><a href="#">Services</a></li>
-									<li><a href="{% static 'news.html' %}">News</a></li>
-									<li><a href="{% static 'contact.html' %}">Contact</a></li>
+									<li><a href="{% static 'news.html' %}">Contact</a></li>
+
+									{% if user.is_authenticated %}
+
+									<li>{{user.first_name}}</li>
+									<li><a href="accounts/logout">Logout</a></li>
+						
+									{% else %}
+
+									<li><a href="accounts/register">Register</a></li>
+									<li><a href="accounts/login">login</a></li>
+
+									{% endif %}
+
 								</ul>
 							</nav>
 							<div class="header_phone ml-auto">Call us: +880 1624390843</div>

@@ -1,0 +1,4 @@
+Installation For Msql Database Connection
+pip install pyodbc
+pip install Django
+pip install django-pyodbc-azure

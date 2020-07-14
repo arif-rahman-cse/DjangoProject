@@ -80,6 +80,8 @@ WSGI_APPLICATION = 'test_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+#PostgreSQL Connection String
+""""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql', #Dtabase Enine Name
@@ -89,7 +91,23 @@ DATABASES = {
         'HOST': 'localhost'
     }
 }
+"""
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'TravelloDB',
+        'USER': 'arif',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'PORT': '',
+
+        'OPTIONS': {
+            'driver': 'SQL Server Native Client 10.0',
+        },
+    },
+}
+DATABASE_CONNECTION_POOLING = False
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
