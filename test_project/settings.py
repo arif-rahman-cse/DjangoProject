@@ -81,7 +81,6 @@ WSGI_APPLICATION = 'test_project.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 #PostgreSQL Connection String
-""""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql', #Dtabase Enine Name
@@ -91,8 +90,8 @@ DATABASES = {
         'HOST': 'localhost'
     }
 }
-"""
 
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
@@ -107,6 +106,7 @@ DATABASES = {
         },
     },
 }
+"""
 DATABASE_CONNECTION_POOLING = False
 
 # Password validation

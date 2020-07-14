@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include('test_app.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('account.urls')),
+    path('api/', include('api.urls')),
 ]
 
 #Add Url for dynamic img
