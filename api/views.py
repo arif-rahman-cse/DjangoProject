@@ -7,3 +7,12 @@ from .serializers import DestinationSerializer
 class DestinationsAPIView(generics.ListAPIView):
     queryset = Destination.objects.all()
     serializer_class = DestinationSerializer
+ 
+
+class DestinationsAPIDetailView(generics.RetrieveUpdateDestroyAPIView): # Get update and delete 
+    queryset = Destination.objects.all()
+    serializer_class = DestinationSerializer
+
+class DestinationsAPINewView(generics.ListCreateAPIView):
+    queryset = Destination.objects.all().order_by('-id')[:1] # Desending order and single item 
+    serializer_class = DestinationSerializer
