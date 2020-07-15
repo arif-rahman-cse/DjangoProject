@@ -1,10 +1,12 @@
-from rest_framework import generics
+from rest_framework import generics, permissions
 from test_app.models import Destination
 from .serializers import DestinationSerializer
 
 # Create your views here.
 
 class DestinationsAPIView(generics.ListAPIView):
+    #  View  level Permissions
+    #permission_classes = (permissions.IsAuthenticated,)
     queryset = Destination.objects.all()
     serializer_class = DestinationSerializer
  
